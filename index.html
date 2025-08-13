@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AndySD | Cinematic Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@400;600&family=Teko:wght@600&family=Bangers&family=Lexend+Deca:wght@300;400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #050507; color: #FFFFFF; font-family: 'Lexend Deca', sans-serif; }
+    .font-orbitron { font-family: 'Orbitron', sans-serif; }
+    .font-display { font-family: 'Teko', sans-serif; }
+    .font-comic { font-family: 'Bangers', cursive; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .section { min-height: 100vh; padding-top: 5rem; padding-bottom: 5rem; display: flex; align-items: center; }
+    .section-title { font-size: 2.8rem; font-family: 'Orbitron', sans-serif; font-weight: bold; margin-bottom: 1rem; text-shadow: 0 3px 20px #00fff9aa, 0 0 1px #fff; }
+    .app-card { transition: transform 0.2s; }
+    .app-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 10px 40px #00fff944; }
+    .sticky-nav { position: fixed; top: 0; left: 0; width: 100%; background: rgba(8,8,12,0.93); z-index: 9999; box-shadow: 0 2px 10px #0005; }
+    .nav-link { color: #aaa; margin: 0 1.5rem; font-weight: 600; letter-spacing: 0.02em; }
+    .nav-link.active, .nav-link:hover { color: #0ff; text-shadow: 0 0 10px #00fff9, 0 0 3px #fff; }
+    .glow { text-shadow: 0 0 20px #00fff988, 0 0 40px #0ff; }
+    @media (max-width: 768px) {
+      .section-title { font-size: 2rem; }
+      .nav-link { margin: 0 0.7rem; }
+    }
+    /* Themed backgrounds for each app section */
+    .theme-innervelocity { background: linear-gradient(110deg,#0f2027,#2c5364 70%); }
+    .theme-artscan, .theme-artperiod { background: #19192f; }
+    .theme-knotbothered { background: linear-gradient(115deg,#e9fffa 40%,#b6f7f3 100%); color:#254; }
+    .theme-protocoldaily { background: linear-gradient(108deg,#e9f7fd 60%,#f5f7fa 100%); color: #155; }
+    .theme-symbio { background: linear-gradient(90deg,#111827 50%,#49f7d3 100%); }
+    .theme-tonez { background: linear-gradient(120deg,#19082b,#7200a0 80%); }
+    .theme-flipfindr { background: linear-gradient(100deg,#f0e4d4 70%,#4A90E2 100%); color: #222;}
+    .theme-mustacheotp { background: linear-gradient(100deg,#390a1e 60%,#8b6e5f 100%); }
+    .theme-clenze { background: linear-gradient(115deg,#defde0 50%,#6ee7b7 100%); color:#226; }
+    .theme-ensight { background: linear-gradient(90deg,#1E293B,#ad8dbd 100%);}
+    .theme-kryption { background: linear-gradient(100deg,#07171b,#14a800 100%);}
+    .theme-cruizr { background: linear-gradient(100deg,#151a2b 60%,#6cd8fa 100%);}
+    /* Extra polish */
+    .section-content { max-width: 1150px; margin: auto; }
+    .brand-accent { color: #00fff9; font-weight: bold; text-shadow: 0 0 20px #00fff944, 0 1px 0 #fff; }
+    .rounded-xl { border-radius: 1.25rem; }
+    .glass { background: rgba(25,25,36,0.5); backdrop-filter: blur(8px); }
+    .about-img { border-radius: 50%; width: 140px; box-shadow: 0 0 20px #00fff977; }
+  </style>
+</head>
+<body>
+  <!-- Sticky Navigation -->
+  <nav class="sticky-nav py-2 flex justify-center gap-3">
+    <a class="nav-link" href="#hero">Home</a>
+    <a class="nav-link" href="#vision">Vision</a>
+    <a class="nav-link" href="#portfolio">Portfolio</a>
+    <a class="nav-link" href="#mission">Mission</a>
+    <a class="nav-link" href="#services">Services</a>
+    <a class="nav-link" href="#story">Story</a>
+    <a class="nav-link" href="#contact">Contact</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="section flex flex-col items-center justify-center text-center">
+    <div>
+      <h1 class="text-6xl md:text-8xl font-black font-orbitron glow tracking-tight mb-6">AndySD</h1>
+      <h2 class="text-2xl md:text-4xl font-semibold mb-4">Cinematic, intelligent tools for clarity, wellness, creativity, and mastery.</h2>
+      <p class="text-lg md:text-xl text-gray-200 max-w-xl mx-auto">Empowering people to change their lives and communities through beautiful, bold, and transformative technology.</p>
+    </div>
+  </section>
+
+  <!-- VISION SECTION -->
+  <section id="vision" class="section glass">
+    <div class="section-content text-center">
+      <h2 class="section-title brand-accent">Our Vision</h2>
+      <p class="text-xl max-w-2xl mx-auto mt-2">
+        AndySD exists to empower, uplift, and transform lives through cinematic, intelligent, and beautifully designed digital tools for focus, creativity, wellness, community, and personal mastery.<br><br>
+        Every app is built to inspire clarity, opportunity, healing, and real-world growth—no matter your background.
+      </p>
+    </div>
+  </section>
+  <!-- PORTFOLIO GRID: ALL 12 APPS -->
+  <section id="portfolio" class="section bg-[#090b13]">
+    <div class="section-content">
+      <h2 class="section-title brand-accent text-center mb-8">Featured Apps</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Ensight -->
+        <div class="app-card theme-ensight glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-orbitron text-rose-200 mb-1">Ensight</h3>
+          <p class="mb-2 text-lg font-medium text-rose-100">Relationship Intelligence Companion</p>
+          <div class="mb-3 text-rose-300">Visualize, understand, and nurture your human connections with AI-powered mapping and emotional insight.</div>
+          <ul class="mb-2 text-sm text-rose-200 list-disc list-inside">
+            <li>Interactive Relationship Graph</li>
+            <li>Neglect/Tension Alerts</li>
+            <li>AI Micro-Actions</li>
+          </ul>
+          <div class="mt-auto text-xs text-rose-100">For: Anyone who wants to deepen their relationships</div>
+        </div>
+
+        <!-- FlipFindr -->
+        <div class="app-card theme-flipfindr glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-comic text-blue-900 mb-1">FlipFindr</h3>
+          <p class="mb-2 text-lg font-bold text-yellow-800">Gamified Resale Companion</p>
+          <div class="mb-3 text-blue-900">Hyperlocal resale, profit prediction, and flipping stats—all in one fun, map-powered toolkit.</div>
+          <ul class="mb-2 text-sm text-blue-900 list-disc list-inside">
+            <li>ROI Scanner & Heatmaps</li>
+            <li>Profit Milestones</li>
+            <li>Flip Tracker</li>
+          </ul>
+          <div class="mt-auto text-xs text-blue-900">For: Side-hustlers & deal hunters</div>
+        </div>
+
+        <!-- Innervelocity -->
+        <div class="app-card theme-innervelocity glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-orbitron text-cyan-200 mb-1">Innervelocity</h3>
+          <p class="mb-2 text-lg font-medium text-cyan-100">Cinematic Focus Engine</p>
+          <div class="mb-3 text-cyan-100">Master focus and momentum with clarity rings, reflection, and guided identity-building quests.</div>
+          <ul class="mb-2 text-sm text-cyan-100 list-disc list-inside">
+            <li>Focus Rings & Timer</li>
+            <li>Guided Journeys</li>
+            <li>AI Pattern Analysis</li>
+          </ul>
+          <div class="mt-auto text-xs text-cyan-100">For: Creatives, entrepreneurs, high performers</div>
+        </div>
+
+        <!-- ArtPeriod -->
+        <div class="app-card theme-artperiod glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-serif text-yellow-200 mb-1">ArtPeriod</h3>
+          <p class="mb-2 text-lg font-medium text-yellow-100">AI Art Scanner & Value Engine</p>
+          <div class="mb-3 text-yellow-200">Scan, ID, and value artwork instantly with a gallery-level, minimalist app for creators and collectors.</div>
+          <ul class="mb-2 text-sm text-yellow-100 list-disc list-inside">
+            <li>Real-Time Art Scan</li>
+            <li>Market Value Estimator</li>
+            <li>Artist & Style Recognition</li>
+          </ul>
+          <div class="mt-auto text-xs text-yellow-200">For: Artists, collectors, art lovers</div>
+        </div>
+
+        <!-- ToneZ from the Crypt -->
+        <div class="app-card theme-tonez glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-display glitch-text text-purple-300 mb-1">ToneZ</h3>
+          <p class="mb-2 text-lg font-medium text-purple-100">Immersive Crypto Educator</p>
+          <div class="mb-3 text-purple-200">Gamified crypto learning, NFT hero cards, and quests—education has never looked this cool.</div>
+          <ul class="mb-2 text-sm text-purple-100 list-disc list-inside">
+            <li>Collectible Hero Archive</li>
+            <li>Interactive Comic UI</li>
+            <li>Crypto Quests</li>
+          </ul>
+          <div class="mt-auto text-xs text-purple-100">For: Crypto beginners & questers</div>
+        </div>
+
+        <!-- MustacheOTP -->
+        <div class="app-card theme-mustacheotp glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-display text-yellow-300 mb-1">MustacheOTP</h3>
+          <p class="mb-2 text-lg font-medium text-yellow-100">Next-Gen OTP Bot</p>
+          <div class="mb-3 text-yellow-100">Steampunk cyber platform for secure, intelligent OTP prediction and analytics—plus animated demo!</div>
+          <ul class="mb-2 text-sm text-yellow-100 list-disc list-inside">
+            <li>Live OTP Stream UI</li>
+            <li>Security Dash & Analytics</li>
+            <li>Plum/Maroon Steampunk Theme</li>
+          </ul>
+          <div class="mt-auto text-xs text-yellow-100">For: Advanced security testers</div>
+        </div>
+
+        <!-- Protocol Daily -->
+        <div class="app-card theme-protocoldaily glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-serif text-green-700 mb-1">Protocol Daily</h3>
+          <p class="mb-2 text-lg font-medium text-green-800">Personalized Wellness Generator</p>
+          <div class="mb-3 text-green-700">AI-crafted daily routines, evidence-based habit tracking, and smart tips for well-being and peak performance.</div>
+          <ul class="mb-2 text-sm text-green-700 list-disc list-inside">
+            <li>Protocol Generator</li>
+            <li>Daily Checklist & Tips</li>
+            <li>Health Progress Insights</li>
+          </ul>
+          <div class="mt-auto text-xs text-green-800">For: Health seekers & productivity geeks</div>
+        </div>
+
+        <!-- Clenze -->
+        <div class="app-card theme-clenze glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-orbitron text-emerald-700 mb-1">Clenze</h3>
+          <p class="mb-2 text-lg font-medium text-emerald-900">Eco Lifestyle & Community App</p>
+          <div class="mb-3 text-emerald-900">Lead a cleaner, greener life with daily eco-challenges, habit tracking, and a live leaderboard.</div>
+          <ul class="mb-2 text-sm text-emerald-900 list-disc list-inside">
+            <li>Eco Challenge Generator</li>
+            <li>Habit Tracker</li>
+            <li>Community Leaderboard</li>
+          </ul>
+          <div class="mt-auto text-xs text-emerald-900">For: Earth-minded and eco-curious</div>
+        </div>
+
+        <!-- Knot Bothered -->
+        <div class="app-card theme-knotbothered glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-orbitron text-emerald-400 mb-1">Knot Bothered</h3>
+          <p class="mb-2 text-lg font-medium text-emerald-600">Sensory Anxiety Relief System</p>
+          <div class="mb-3 text-emerald-700">Evidence-based guided practices for emotional regulation, stress, and self-reflection.</div>
+          <ul class="mb-2 text-sm text-emerald-700 list-disc list-inside">
+            <li>Guided Breathwork</li>
+            <li>Interactive Knot UI</li>
+            <li>Mood Journal & Insights</li>
+          </ul>
+          <div class="mt-auto text-xs text-emerald-700">For: Anyone managing stress & emotions</div>
+        </div>
+
+        <!-- Symbio -->
+        <div class="app-card theme-symbio glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-orbitron text-teal-200 mb-1">Symbio</h3>
+          <p class="mb-2 text-lg font-medium text-teal-100">Collaborative Idea Engine</p>
+          <div class="mb-3 text-teal-100">Co-create, map, and expand ideas in real time—built for teams and visionaries alike.</div>
+          <ul class="mb-2 text-sm text-teal-100 list-disc list-inside">
+            <li>Mind Map UI</li>
+            <li>Idea Tagging/AI Expansion</li>
+            <li>Live Collaboration (soon)</li>
+          </ul>
+          <div class="mt-auto text-xs text-teal-100">For: Teams, creatives, big thinkers</div>
+        </div>
+
+        <!-- Kryption -->
+        <div class="app-card theme-kryption glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-orbitron text-green-300 mb-1">Kryption</h3>
+          <p class="mb-2 text-lg font-medium text-green-200">Cybersecurity Game & Trainer</p>
+          <div class="mb-3 text-green-100">Gamified, story-driven app to master cybersecurity with challenges and interactive learning.</div>
+          <ul class="mb-2 text-sm text-green-200 list-disc list-inside">
+            <li>Interactive Cyber Missions</li>
+            <li>Leaderboard & XP</li>
+            <li>Daily Challenges</li>
+          </ul>
+          <div class="mt-auto text-xs text-green-200">For: Aspiring cyber pros</div>
+        </div>
+
+        <!-- Cruizr -->
+        <div class="app-card theme-cruizr glass rounded-xl p-7 flex flex-col h-full">
+          <h3 class="text-4xl font-orbitron text-cyan-300 mb-1">Cruizr</h3>
+          <p class="mb-2 text-lg font-medium text-cyan-200">GPS Social Discovery App</p>
+          <div class="mb-3 text-cyan-100">Real-world map, live avatars, and mood-based connection—social networking reimagined for the streets.</div>
+          <ul class="mb-2 text-sm text-cyan-200 list-disc list-inside">
+            <li>RealWorld™ Interactive Map</li>
+            <li>CruiseMood™ & Realms</li>
+            <li>Anonymous Chat & Feedback</li>
+          </ul>
+          <div class="mt-auto text-xs text-cyan-200">For: Adventurers, locals, and explorers</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- MISSION SECTION -->
+  <section id="mission" class="section glass">
+    <div class="section-content text-center">
+      <h2 class="section-title brand-accent">Our Mission</h2>
+      <p class="text-xl max-w-2xl mx-auto mt-2">
+        To build not just apps, but <span class="brand-accent">powerful companions for life</span>:<br>
+        <span class="text-lg text-gray-200 block mt-3">
+          — To help you focus, heal, and create<br>
+          — To give you tools for self-mastery, income, and community<br>
+          — To deliver next-level UI/UX and features that truly change the game<br>
+        </span>
+        We’re relentless about improvement, innovation, and impact—every app, every day.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES / FOR HIRE SECTION -->
+  <section id="services" class="section glass">
+    <div class="section-content text-center">
+      <h2 class="section-title brand-accent">Work With AndySD</h2>
+      <p class="text-lg max-w-2xl mx-auto mb-6">
+        Open for freelance, contract, and creative collaboration.  
+        <br>Ready to build, brand, or scale your next big thing?  
+        <br><span class="text-base text-cyan-300">Get the creative firepower of AndySD behind your idea.</span>
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
+        <div class="bg-[#101114]/80 rounded-xl p-6 border border-cyan-700 glass">
+          <h3 class="text-2xl font-orbitron text-cyan-400 mb-2">App Development</h3>
+          <ul class="list-disc list-inside text-lg">
+            <li>Custom web & mobile apps</li>
+            <li>AI-powered product design</li>
+            <li>Immersive UI/UX prototyping</li>
+          </ul>
+        </div>
+        <div class="bg-[#101114]/80 rounded-xl p-6 border border-rose-400 glass">
+          <h3 class="text-2xl font-orbitron text-rose-300 mb-2">Brand & Product Consulting</h3>
+          <ul class="list-disc list-inside text-lg">
+            <li>Brand strategy & naming</li>
+            <li>Vision and roadmap creation</li>
+            <li>Storytelling & pitch decks</li>
+          </ul>
+        </div>
+        <div class="bg-[#101114]/80 rounded-xl p-6 border border-yellow-500 glass">
+          <h3 class="text-2xl font-orbitron text-yellow-300 mb-2">Partnership & For Hire</h3>
+          <ul class="list-disc list-inside text-lg">
+            <li>Remote, contract, or full-time</li>
+            <li>Venture & equity collaborations</li>
+            <li>Rapid MVP & demo builds</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <a href="#contact" class="inline-block bg-cyan-400 hover:bg-cyan-600 text-black font-bold py-3 px-8 rounded-full shadow-lg mt-4 text-xl transition">Contact AndySD</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER STORY / ABOUT SECTION -->
+  <section id="story" class="section glass">
+    <div class="section-content max-w-3xl mx-auto flex flex-col items-center text-center">
+      <!-- Optional: Profile image placeholder -->
+      <!-- <img src="assets/andysd-avatar.png" class="about-img mb-5" alt="AndySD"> -->
+      <h2 class="section-title brand-accent">My Story</h2>
+      <p class="text-xl mt-4">
+        <span class="brand-accent font-semibold text-3xl">Hey, I’m Andrew (“AndySD”).</span><br>
+        I started this brand from the ground up—literally from the streets—after losing everything but my vision for better, more empowering technology.<br><br>
+        Each app in this portfolio is inspired by real struggles, relentless curiosity, and a drive to create practical hope. If I can do this, so can you—and I want to build the tools that make it possible.<br><br>
+        <span class="text-cyan-200">AndySD is for the dreamers, the doers, the healers, the creators, the survivors—and anyone ready to flip the script on their story.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT / SOCIAL SECTION -->
+  <section id="contact" class="section glass">
+    <div class="section-content text-center">
+      <h2 class="section-title brand-accent">Get In Touch</h2>
+      <p class="text-lg mb-6">Interested in working together, launching your own app, or collaborating?  
+        <br>Let’s build something legendary.</p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-6">
+        <div>
+          <span class="block font-bold text-xl mb-1">Email:</span>
+          <a href="mailto:andysdis.dev@gmail.com" class="text-cyan-300 underline text-lg">andysdis.dev@gmail.com</a>
+        </div>
+        <div>
+          <span class="block font-bold text-xl mb-1">GitHub:</span>
+          <a href="https://github.com/andysd-com" target="_blank" class="text-cyan-300 underline text-lg">github.com/andysd-com</a>
+        </div>
+        <!-- Optional: Add more socials -->
+        <!--
+        <div>
+          <span class="block font-bold text-xl mb-1">Twitter/X:</span>
+          <a href="https://twitter.com/yourhandle" target="_blank" class="text-cyan-300 underline text-lg">@yourhandle</a>
+        </div>
+        -->
+      </div>
+      <!-- Optional: Simple contact form (static, or wire up with Formspree/Netlify Forms) -->
+      <!--
+      <form class="max-w-md mx-auto mt-8">
+        <input type="text" placeholder="Name" class="w-full p-3 mb-3 rounded-lg bg-black/60 border border-cyan-200">
+        <input type="email" placeholder="Email" class="w-full p-3 mb-3 rounded-lg bg-black/60 border border-cyan-200">
+        <textarea placeholder="Message" class="w-full p-3 mb-3 rounded-lg bg-black/60 border border-cyan-200"></textarea>
+        <button type="submit" class="bg-cyan-400 hover:bg-cyan-600 text-black font-bold py-2 px-6 rounded-lg">Send</button>
+      </form>
+      -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full text-center py-4 text-gray-400 text-sm bg-black/60 border-t border-cyan-900">
+    Crafted with <span class="text-cyan-300 font-bold">AndySD</span> energy &mdash; <span class="font-mono">2025</span><br>
+    <span class="text-xs">All content © AndySD. Permission granted to remix for positive impact.</span>
+  </footer>
+
+</body>
+</html>
